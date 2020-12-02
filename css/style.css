@@ -77,6 +77,10 @@ html {
   background-color: #49505F;
 }
 
+.active {
+  background-color: #49505F;
+}
+
 .conquer {
   background: url("/img/bg-1.jpg") no-repeat center;
   background-size: cover;
@@ -319,5 +323,31 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 9999;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #333333;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+}
+
+.back-to-top:hover {
+  background: #ffffff;
+  color: #333333;
+  border: 2px solid #333333;
+}
+
+.back-to-top_show {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
