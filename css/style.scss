@@ -124,6 +124,11 @@ html {
         }
     }
 
+    &-services {
+        max-width: 260px;
+        max-height: 500px;
+    }
+
     &__content {
         padding: 0 30px 30px 30px;
         margin: 0 auto;
@@ -144,6 +149,9 @@ html {
 
     &__description {
         padding-top: 20px;
+        &_services {
+            line-height: 25px;
+        }
     }
 }
 
@@ -154,6 +162,8 @@ html {
     color: #ffffff;
     border: none;
     border-radius: 6px;
+    outline: none;
+    cursor: pointer;
     &_color-green {
         background: #178A27;
     }
@@ -163,4 +173,125 @@ html {
     &_color-red {
         background: #852406;
     }
+}
+
+.services {
+    .wrapper {
+        max-width: 1140px;
+    }
+    &__header {
+        background: url("../img/bg-2.jpg") no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 313px;        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__description {
+        padding-top: 30px;
+    }
+
+    &__middle {
+        padding-top: 50px;
+        .wrapper {                
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__bottom {
+        padding-top: 30px;
+        .wrapper {
+            max-width: 1140px;
+        }
+    }
+
+}
+
+.section-title {
+    font-size: 3.6rem;
+    color: #ffffff;
+    text-shadow: 2px 2px #aaa;
+    text-align: center;
+}
+
+.section-description {
+    max-width: 700px;
+    color: #ffffff;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 25px;
+    text-align: center;
+}
+
+.contacts {
+    padding: 100px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("/img/bg-3.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    &__section-description {
+        margin-top: 25px;
+        color: #000000;
+        padding: 20px 15px;
+        background: rgba(242,242,242,0.4);
+        border-radius: 7px;
+    }
+}
+
+.contacts-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__inputs {        
+        display: flex;
+    }
+    &__left-side {
+        display: flex;
+        flex-direction: column;
+    }
+    &__input, &__textarea {
+        margin-top: 18px;
+        width: 345px;
+        padding: 10px;
+        background: rgba(242,242,242,0.4);
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        &::placeholder {
+            color: #000000;
+        }
+    }
+    &__textarea {
+        margin-left: 18px;
+        height: 145px;
+        resize: none;
+    }
+
+    input[type=submit] {
+        max-width: 105px;
+        background: #262628 none repeat scroll 0 0;
+        color: #fff;
+        margin-top: 20px;
+        padding: 10px 30px;
+        font-size: 18px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 1px solid #bbbbbb;
+        &:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+    }
+}
+
+.footer {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
