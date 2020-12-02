@@ -1,3 +1,4 @@
+//Back to top button
 let backToTopButton = document.querySelector('.back-to-top');
 
 const trackScroll = () => {
@@ -13,7 +14,20 @@ const backToTop = () => {
 
 window.addEventListener('scroll', trackScroll);
 backToTopButton.addEventListener('click', backToTop);
+//Scroll to anchor
+let anchors = document.querySelectorAll('.scroll-to');
+for(let anchor of anchors) {
+    anchor.addEventListener('click', (e) => {
+        e.preventDefault;
 
+        const blockId = anchor.getAttribute('href');
+
+        document.querySelector(blockId).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+}
 
 
 
