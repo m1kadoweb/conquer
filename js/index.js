@@ -30,5 +30,24 @@ for(let anchor of anchors) {
 }
 
 
+//scrollspy
 
+let section = document.querySelectorAll('body > section');
+
+const onScroll = () => {
+    let currentPosition = window.scrollY;
+
+    section.forEach((el) => {
+        if(el.offsetTop <= currentPosition && el.offsetTop + el.offsetHeight > currentPosition) {
+            anchors.forEach((anchor) => {
+                anchor.classList.remove('active');
+                if(el.getAttribute('id') === anchor.getAttribute('href').substring(1)) {
+                    anchor.classList.add('active')
+                }
+            })
+        }
+    })
+}
+
+document.addEventListener('scroll', onScroll)
 

@@ -1,3 +1,6 @@
+@import "../css/variables";
+@import "../css/mixins";
+
 *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -35,8 +38,17 @@ html {
 }
 
 .wrapper {
-    max-width: 1170px;
+    max-width: 1140px;
     margin: 0 auto;
+    @include media_lg {
+        max-width: $wrapper-lg;
+    }
+    @include media_md {
+        max-width: $wrapper-md;
+    }
+    @include media_sm {
+        max-width: $wrapper-sm;
+    }
 }
 
 .header {
@@ -44,12 +56,18 @@ html {
     top: 0;
     max-height: 77px;
     background-color: #383E4C;
+    @include media_sm {
+        background: none;
+    }
     
 }
 
 .navigation {
     max-width: 772px;
-    margin: 0 auto;    
+    margin: 0 auto;  
+    @include media_md {
+        max-width: 650px;
+    }
 
 }
 
@@ -70,6 +88,9 @@ html {
         transition: all linear 0.3s;
         &:hover {
             background-color: #49505F;
+        }
+        @include media_md {
+            font-size: 1.4rem;
         }
     }
 }
@@ -105,11 +126,19 @@ html {
         padding-top: 60px;
         display: flex;
         justify-content: space-between;
+        @include media_sm {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     &__bottom {
         padding: 60px 0;
         display: flex;
-        justify-content: space-between;        
+        justify-content: space-between;  
+        @include media_sm {
+            flex-wrap: wrap;
+            justify-content: center;
+        }      
     }
 
     &__button {
@@ -120,24 +149,107 @@ html {
 
 .card {
     background: #F2F2F2;
-
     &-about {
         max-width: 360px;
         max-height: 430px;
+        img {
+            @include media_lg {
+                max-width: 293px;
+            }
+            @include media_md {
+                max-width: 220px;
+            }
+            @include media_sm {
+                max-width: 360px;
+            }
+        }
         &-bottom {
             max-width: 555px;
             max-height: 567px;
+            img {
+                @include media_lg {
+                    max-width: 455px;
+                }
+                @include media_md {
+                    max-width: 345px;
+                }                
+
+            }
+            @include media_lg {
+                max-width: 455px;
+                max-height: 545px;
+            }
+            @include media_md {
+                max-width: 345px;
+            }
+            @include media_sm {
+                margin: 15px 50px;
+            }
+
+        }
+        @include media_lg {
+            max-width: 293px;
+            max-height: 420px;
+        }
+        @include media_md {
+            max-width: 220px;
+            max-height: 450px;
+        }
+        @include media_sm {
+            max-width: 360px;
+            margin: 15px 50px;
         }
     }
 
     &-services {
         max-width: 260px;
         max-height: 500px;
+        img {
+            @include media_lg {
+                max-width: 215px;
+            }
+            @include media_md {
+                max-width: 260px;
+            }
+        }
+        @include media_lg {
+            max-width: 215px;
+        }
+        @include media_md {
+            max-width: 260px;
+            margin-top: 30px;
+        }
+
+        &__bottom {
+            @include media_lg {
+                max-width: 940px;
+                margin: 0 auto;
+            }
+            @include media_sm {
+                max-width: 737px;
+            }   
+            img {
+                @include media_lg {
+                    max-width: 940px;
+                }
+                @include media_md {
+                    max-width: 750px;
+                }           
+                @include media_sm {
+                    max-width: 737px;
+                }       
+            }
+
+        }
     }
+
 
     &__content {
         padding: 0 30px 30px 30px;
         margin: 0 auto;
+        @include media_lg {
+            padding: 0 20px 20px 20px;
+        }
     }
 
     &__title {
@@ -150,6 +262,9 @@ html {
         }
         &_blue {
             color: #1686C1;
+        }
+        @include media_md {
+            font-size: 1.8rem;
         }
     }
 
@@ -182,9 +297,6 @@ html {
 }
 
 .services {
-    .wrapper {
-        max-width: 1140px;
-    }
     &__header {
         background: url("../img/bg-2.jpg") no-repeat center;
         background-size: cover;
@@ -204,14 +316,21 @@ html {
         .wrapper {                
             display: flex;
             justify-content: space-between;
+            @include media_md {
+                flex-wrap: wrap;
+            }
+            @include media_sm {
+                justify-content: space-around;
+            }
         }
+        @include media_md {
+            padding-top: 30px;
+        }
+
     }
     &__bottom {
         padding-top: 30px;
-        padding-bottom: 90px;
-        .wrapper {
-            max-width: 1140px;
-        }
+        margin-bottom: 110px;
     }
 
 }
@@ -255,11 +374,26 @@ html {
     align-items: center;
     &__inputs {        
         display: flex;
+        @include media_sm {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
     }
     &__left-side {
         display: flex;
         flex-direction: column;
+        @include media_sm {
+            width: 100%;
+        }
     }
+
+    &__right-side {
+        @include media_sm {
+            width: 100%;
+        }
+    }
+
     &__input, &__textarea {
         margin-top: 18px;
         width: 345px;
@@ -271,11 +405,18 @@ html {
         &::placeholder {
             color: #000000;
         }
+        @include media_sm {
+            width: 100%;
+        }
     }
     &__textarea {
         margin-left: 18px;
         height: 145px;
         resize: none;
+        @include media_sm {
+            width: 100%;
+            margin-left: 0;
+        }
     }
 
     input[type=submit] {
@@ -336,4 +477,8 @@ html {
 #contacts {
     padding-top: 75px;
     margin-top: -75px;
+    @include media_md {
+        padding-top: 68px;
+        margin-top: -68px;
+    }
 }

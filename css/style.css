@@ -37,8 +37,26 @@ html {
 }
 
 .wrapper {
-  max-width: 1170px;
+  max-width: 1140px;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    max-width: 940px;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 720%;
+  }
 }
 
 .header {
@@ -48,9 +66,21 @@ html {
   background-color: #383E4C;
 }
 
+@media (max-width: 768px) {
+  .header {
+    background: none;
+  }
+}
+
 .navigation {
   max-width: 772px;
   margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .navigation {
+    max-width: 650px;
+  }
 }
 
 .menu {
@@ -75,6 +105,12 @@ html {
 
 .menu__link:hover {
   background-color: #49505F;
+}
+
+@media (max-width: 992px) {
+  .menu__link {
+    font-size: 1.4rem;
+  }
 }
 
 .active {
@@ -111,10 +147,24 @@ html {
   justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .about-us__top {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 .about-us__bottom {
   padding: 60px 0;
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .about-us__bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .about-us__button {
@@ -131,9 +181,79 @@ html {
   max-height: 430px;
 }
 
+@media (max-width: 1200px) {
+  .card-about img {
+    max-width: 293px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-about img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-about img {
+    max-width: 360px;
+  }
+}
+
 .card-about-bottom {
   max-width: 555px;
   max-height: 567px;
+}
+
+@media (max-width: 1200px) {
+  .card-about-bottom img {
+    max-width: 455px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-about-bottom img {
+    max-width: 345px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card-about-bottom {
+    max-width: 455px;
+    max-height: 545px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-about-bottom {
+    max-width: 345px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-about-bottom {
+    margin: 15px 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card-about {
+    max-width: 293px;
+    max-height: 420px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-about {
+    max-width: 220px;
+    max-height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-about {
+    max-width: 360px;
+    margin: 15px 50px;
+  }
 }
 
 .card-services {
@@ -141,9 +261,71 @@ html {
   max-height: 500px;
 }
 
+@media (max-width: 1200px) {
+  .card-services img {
+    max-width: 215px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-services img {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card-services {
+    max-width: 215px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-services {
+    max-width: 260px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card-services__bottom {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-services__bottom {
+    max-width: 737px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card-services__bottom img {
+    max-width: 940px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-services__bottom img {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-services__bottom img {
+    max-width: 737px;
+  }
+}
+
 .card__content {
   padding: 0 30px 30px 30px;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .card__content {
+    padding: 0 20px 20px 20px;
+  }
 }
 
 .card__title {
@@ -160,6 +342,12 @@ html {
 
 .card__title_blue {
   color: #1686C1;
+}
+
+@media (max-width: 992px) {
+  .card__title {
+    font-size: 1.8rem;
+  }
 }
 
 .card__description {
@@ -193,10 +381,6 @@ html {
   background: #852406;
 }
 
-.services .wrapper {
-  max-width: 1140px;
-}
-
 .services__header {
   background: url("../img/bg-2.jpg") no-repeat center;
   background-size: cover;
@@ -220,13 +404,27 @@ html {
   justify-content: space-between;
 }
 
-.services__bottom {
-  padding-top: 30px;
-  padding-bottom: 90px;
+@media (max-width: 992px) {
+  .services__middle .wrapper {
+    flex-wrap: wrap;
+  }
 }
 
-.services__bottom .wrapper {
-  max-width: 1140px;
+@media (max-width: 768px) {
+  .services__middle .wrapper {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 992px) {
+  .services__middle {
+    padding-top: 30px;
+  }
+}
+
+.services__bottom {
+  padding-top: 30px;
+  margin-bottom: 110px;
 }
 
 .section-title {
@@ -273,9 +471,29 @@ html {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .contacts-form__inputs {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
 .contacts-form__left-side {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .contacts-form__left-side {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-form__right-side {
+    width: 100%;
+  }
 }
 
 .contacts-form__input, .contacts-form__textarea {
@@ -292,10 +510,23 @@ html {
   color: #000000;
 }
 
+@media (max-width: 768px) {
+  .contacts-form__input, .contacts-form__textarea {
+    width: 100%;
+  }
+}
+
 .contacts-form__textarea {
   margin-left: 18px;
   height: 145px;
   resize: none;
+}
+
+@media (max-width: 768px) {
+  .contacts-form__textarea {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .contacts-form input[type=submit] {
@@ -355,5 +586,15 @@ html {
 #contacts {
   padding-top: 75px;
   margin-top: -75px;
+}
+
+@media (max-width: 992px) {
+  #conquer,
+  #about-us,
+  #services,
+  #contacts {
+    padding-top: 68px;
+    margin-top: -68px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
