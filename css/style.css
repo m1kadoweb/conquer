@@ -105,17 +105,14 @@ html {
   text-align: center;
 }
 
-.about-us {
-  padding: 60px 0;
-}
-
 .about-us__top {
+  padding-top: 60px;
   display: flex;
   justify-content: space-between;
 }
 
 .about-us__bottom {
-  padding-top: 60px;
+  padding: 60px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -225,6 +222,7 @@ html {
 
 .services__bottom {
   padding-top: 30px;
+  padding-bottom: 90px;
 }
 
 .services__bottom .wrapper {
@@ -349,5 +347,13 @@ html {
 
 .back-to-top_show {
   display: block;
+}
+
+#conquer,
+#about-us,
+#services,
+#contacts {
+  padding-top: 75px;
+  margin-top: -75px;
 }
 /*# sourceMappingURL=style.css.map */
