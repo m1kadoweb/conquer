@@ -51,3 +51,17 @@ const onScroll = () => {
 
 document.addEventListener('scroll', onScroll)
 
+//navigation small screen 
+
+const navbar = document.querySelector('.navigation')
+const hamburger = document.querySelector('.hamburger')
+let menuLinks = document.querySelectorAll('.menu__item')
+const toggleHamburger = () => {
+    navbar.classList.toggle('show-nav');
+    hamburger.classList.toggle('hamburger-close');
+}
+menuLinks.forEach((menuLink) => {
+    menuLink.addEventListener('click', toggleHamburger);
+})
+
+hamburger.addEventListener('click', toggleHamburger);
